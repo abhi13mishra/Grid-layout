@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 200px);
+      gap: 10px;
+      width: 80%;
+      margin: auto;
+      background-color: #aaa8d5;
+      padding: 10px;
+      border-left:3px solid black;
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: black;
+      border-radius: 6px;
+    }
+
+    .box1 { background-color: #2980b9; }
+    .box2 { background-color: #27ae60; }
+    .box3 { background-color: #f1c40f; }
+    .box4 { background-color: #e74c3c; grid-column: 1 / span 2; }
+    .box5 { background-color: #c0392b; }
+    .box6 { background-color: #f5b7b1; grid-column: 3 / 4; grid-row: 1 / span 2; }
+
+    .box1 { grid-column: 1; grid-row: 2; }
+    .box5 { grid-column: 2; grid-row: 2; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box box4">4</div>
+    <div class="box box6">6</div>
+    <div class="box box1">1</div>
+    <div class="box box5">5</div>
+  </div>
+
+</body>
+</html>
